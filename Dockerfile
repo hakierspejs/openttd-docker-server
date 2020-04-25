@@ -1,7 +1,7 @@
-FROM ubuntu:20.04
+FROM fedora:31
 
-RUN apt-get update && apt-get install openttd -y
-RUN adduser --disabled-password --uid 1000 --shell /bin/bash --gecos "" openttd
+RUN dnf upgrade -y && dnf install -y openttd
+RUN useradd --uid 1000 --shell /bin/bash openttd
 ADD ./openttd.sh /
 ADD ./openttd.cfg /home/openttd/.openttd/
 
