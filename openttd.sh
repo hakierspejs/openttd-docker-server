@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# copied from here:
+# https://github.com/bateau84/openttd/blob/master/openttd.sh
+
 savepath="/home/openttd/.openttd/save"
 savegame="${savepath}/${savename}"
 LOADGAME_CHECK="${loadgame}x"
