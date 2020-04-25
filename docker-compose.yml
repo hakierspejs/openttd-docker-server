@@ -6,7 +6,7 @@ services:
             - "3979:3979/tcp"
             - "3979:3979/udp"
         volumes:
-            - ./.openttd:/home/openttd/.openttd:z
+            - ./openttd:/home/openttd/.openttd:z
         environment:
-            loadgame: false
-            savegame: hakier-game.sav
+            loadgame: "false"
+            savegame: "hakier-game.sav"
