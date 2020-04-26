@@ -1,0 +1,14 @@
+version: '3'
+services:
+    openttd:
+        image: bateau/openttd:latest
+        ports:
+            - "3979:3979/tcp"
+            - "3979:3979/udp"
+        volumes:
+            - ./openttd:/home/openttd/.openttd:z
+        restart: unless-stopped
+        environment:
+            loadgame: "false"
+            savename: "hakier-game.sav"
+            savepath: "/home/openttd/.openttd/save"
